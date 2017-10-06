@@ -1,0 +1,378 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #5f86b2;
+}
+
+/* BARRA NEGRA LOGIN */
+
+	#barraNegra{
+
+		background-color: black;
+		width: 100%;
+		height: 25px;
+		min-width: 999px;
+
+	}
+
+	#barraLogin{
+
+		margin: 0 auto;
+		position: relative;
+		width: 999px;
+	}
+
+	#listaLogin{
+
+		float: right;
+		padding-top: 5px;
+		text-decoration: none;
+
+	}
+
+	#listaLogin li{
+
+		display: inline;
+		color: white;
+
+	}
+
+	#listaLogin li a{
+
+		color: white;
+		text-decoration: none;
+	}
+
+	#listaLogin li a:hover{
+
+		color: #002147;
+	}
+
+	/* HEADER ES LA PARTE SUPERIOR DONDE ESTA EL MENU DE NAVEGACIÓN */
+
+	header{
+
+		text-align: center;
+		background-color: #002147;
+		width: 100%;
+		height: 120px;
+		position: relative;
+
+	}
+
+    section{
+
+    	position: relative;
+    	margin: 0 auto;
+    	width: 999px;
+    	height: 62px;
+    	background-color: #002147;
+
+    }
+
+    figure{
+
+    	
+    	float: left;
+    	width: 25%;
+    	height: 62px;
+        margin-left: 0px;
+    	
+    }
+
+    figure img{
+
+    	position: absolute;
+    	width: 600px;
+        height: 120px;
+        margin-left: -465px;
+    	
+    	
+    }
+
+    figure2{
+
+        
+        float: left;
+        width: 25%;
+        height: 62px;
+        margin-left: 0px;
+        
+    }
+
+    figure2 img{
+
+        position: absolute;
+        width: 300px;
+        height: 120px;
+        margin-left: -115px;
+        
+        
+    }
+
+    nav{
+
+    	position: relative;
+    	float: right;
+    	width: 75%;
+    	height: 62px;
+    	   
+    }
+
+ 	nav ul{
+
+ 		color: white;
+ 		text-align: right;
+ 		text-decoration: none;
+ 		padding-top: 30px;
+ 	    font-size: 20px;
+    	
+    	   
+    }
+
+    nav ul li{
+
+    	display: inline;
+ 		text-align: right;
+ 		padding-right: 9px;
+ 	    padding-left: 9px;
+    	
+    	   
+    }
+
+    nav ul li:hover{
+
+ 		color: #002147;
+ 		background-color: white;
+ 		padding-bottom: 5px;
+ 	    padding-top:  10px;
+    	
+    	   
+    } 
+
+   
+
+
+
+    /* FIN HEADER */
+
+
+    /* MEDIO main  */
+
+    main{
+
+    	margin:0 auto;
+    	width: 100%;
+    	height: 500px;
+    }
+
+    /* CON ESTO PODEMOS INSERTAR UNA FOTO DONDE QUERAMOS 
+
+    #centroLogin{
+    	background-color: #5f86b2;
+    	background-image: url('../img/fondo.png'); 
+    	background-repeat: no-repeat;
+    	background-position: center center;
+    	width: 100%;
+    	height: 500px;
+    	margin: 0 auto;
+    }
+
+    /*
+
+    /* FORMULARIO */
+
+    #headerLogin{ 
+
+    	background-color: #5f86b2;
+	
+
+    }
+
+    #headerCentro{
+
+    	margin: 0 auto;
+    	width: 385px;
+    }
+    
+    #headerLogin h2{ 
+
+    	padding-top: 50px;
+    	color: white;
+    	float: left;
+        font-size: 65px;
+
+
+
+    }
+
+    /* CUADRO FORMULARIO */
+    
+    
+    #contenido{
+
+        padding-top: 45px;
+
+    } 
+
+    #formCentro{
+
+        background-color: #5f86b2;
+    	width: 485px;
+    	height: 300px;
+    	margin: 0 auto;
+    	border: 6px solid #431FE4;
+    	border-radius: 6px;
+        padding-top: 25px;
+
+    }
+
+    #formLogin{
+
+    	padding: 15px;
+    }
+
+    /* CONFIGURACION DE LOS BOTONES */
+
+    #form input#user:focus, form input#pass:focus {
+
+    	box-shadow: 0px 0px 5px #80D8FF;
+    	-webkit-box.box-shadow: 0px 0px 5px #80D8FF;
+    	-moz-box-shadow: 0px 0px 5px #80D8FF;
+    }
+
+    form p{
+
+    	color: white;
+    	font-size: 20px;
+    	margin-bottom: 10px;
+    }
+
+    /* CONFIGURACIÓN DE LOS BOTONES */
+    
+    .user, .pass{
+
+    	border: 2px solid white;
+    	padding: 5px;
+    	font-size: 26px;
+    	margin-bottom: 10px;
+    }
+
+     /* cuando se pasa el raton se pone azul blojito y las letras de color negro*/
+
+    .user:hover, .pass:hover{
+
+    	background-color: #80D8FF;
+    	color:black;
+    	cursor: pointer;
+    }
+
+    .submit, .reset{
+
+    	margin-top: 20px;
+    	padding: 5px;
+    	color: white;
+    	background-color: #002147;
+    	font-size: 25px;
+    	border: 0;
+    }
+
+
+    /* cuando se pasa el raton se pone rojo y las letras de color blanco*/
+    .submit:hover, .reset:hover{
+
+    	background-color: red;
+    	color:white;
+    	cursor: pointer;
+    }
+	
+    #error{
+
+    	margin: 0auto;
+    	width: 500px;
+    	height: auto;
+
+
+    }
+
+    #error p{
+
+    	padding-top: 100px;
+    	width: 1000px;
+    	height: 40px;
+    	text-align: center; 
+        font-size: 50px;
+        text-transform: uppercase;
+
+    	
+
+    }
+
+    /* mensaje del php cuando el usuario y contraseña inconrrectos */
+
+    .mensaje{
+
+        
+        border-collapse: collapse;
+        border: 5px solid red;
+        border-radius: 6px;
+        
+
+    }
+
+    /* Animacion en intermitente del usuario y contraseña incorrecto */
+
+        
+
+    .mensaje:hover{
+
+        cursor: pointer;
+        background-color: #FE9A2E;
+        color:black;
+        animation-name: mensaje;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        -webkit-animation-name:mensaje;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+
+        
+    }
+
+    @-moz-keyframes mensaje {
+
+        0% {opacity: 1.0; }
+        50% {opacity: 0.0; }
+        100% {opacity: 1.0; }
+    }
+
+    @-webkit-keyframes mensaje {
+
+        0% {opacity: 1.0; }
+        50% {opacity: 0.0; }
+        100% {opacity: 1.0; }
+
+    }
+
+    @keyframes mensaje {
+
+        0% {opacity: 1.0; }
+        50% {opacity: 0.0; }
+        100% {opacity: 1.0; }
+
+     }
+
+
+
+
+
+
+
+
+    /* FIN DEL FORMULARIO */
+
