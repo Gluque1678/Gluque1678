@@ -23,19 +23,10 @@
 
 	</header>
 	
-		<nav class="navbar navbar-dark bg-dark">
-			<!-- Navbar content -->
-			<a href="index.php">INICIO</a>
-			<a href="quienes.php">QUIENES SOMOS</a>
-			<a href="hacemos.php">QUE HACEMOS</a>
-			<a href="contactos.php">CONTACTOS</a>
+		<!--el include menu de navegacion cabecera-->
+		<?php include('header.php');
+		?>	
 
-			<form class="form-inline my-2 my-lg-0">
-      			<input class="form-control mr-sm-2" type="text" placeholder="Search">
-     			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    		</form>
-		
-		</nav>
 
 			
 	</header>   

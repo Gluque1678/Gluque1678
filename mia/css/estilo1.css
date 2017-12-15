@@ -1,3 +1,5 @@
+<!--Pagina de estilo de usuarios-->
+
 *{
 	margin: 0;
 	padding: 0;
@@ -8,6 +10,7 @@ body{
 }
 
 /* aqui esta el pie de mi página de usuarios*/
+
 
 .footer	{
 
@@ -53,3 +56,51 @@ body{
 	width: 3.2rem;
 
 }
+
+
+/* como sera las imagenes mostradas y donde se colocaran */
+
+.card-img-top	{
+
+	margin-left: 140px;
+	margin-top: 20px;
+	
+}
+
+/* como se vera el titulo en el cuadro */
+
+.card-title	{
+
+	text-align: center;
+}
+
+/* como se vera el texto */
+
+.card-text	{
+
+	text-align: justify;
+
+}
+
+
+
+/* propiedades del bonton mostrar productos */
+
+.btn {
+
+	margin-top: -20px;
+	margin-left: 200px;
+}
+
+
+
+
+
+
+
+
+ 
+
+
+
+

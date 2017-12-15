@@ -1,3 +1,5 @@
+<!--Pagina de estilo del indice-->
+
 *{
 	margin: 0;
 	padding: 0;
@@ -6,17 +8,6 @@
 body{
 	background-color: #5f86b2;
 }
-
-/* BARRA NEGRA LOGIN */
-
-	#barraNegra{
-
-		background-color: black;
-		width: 100%;
-		height: 25px;
-		min-width: 999px;
-
-	}
 
 	#barraLogin{
 
@@ -52,18 +43,18 @@ body{
 	}
 
 	/* HEADER ES LA PARTE SUPERIOR DONDE ESTA EL MENU DE NAVEGACIÓN */
-
+   
 	header{
 
 		text-align: center;
 		background-color: #002147;
 		width: 100%;
-		height: 120px;
+		height: 150px;
 		position: relative;
 
 	}
 
-    section{
+    #cabecera{
 
     	position: relative;
     	margin: 0 auto;
@@ -72,6 +63,8 @@ body{
     	background-color: #002147;
 
     }
+
+    
 
     figure{
 
@@ -86,39 +79,25 @@ body{
     figure img{
 
     	position: absolute;
-    	width: 600px;
-        height: 120px;
-        margin-left: -465px;
+    	width: 500px;
+        height: 130px;
+        margin-left: -460px;
+    	margin-top: 10px;
     	
-    	
     }
 
-    figure2{
 
-        
-        float: left;
-        width: 25%;
-        height: 62px;
-        margin-left: 0px;
-        
-    }
+    
 
-    figure2 img{
-
-        position: absolute;
-        width: 300px;
-        height: 120px;
-        margin-left: -115px;
-        
-        
-    }
-
+    
     nav{
 
     	position: relative;
     	float: right;
-    	width: 75%;
-    	height: 62px;
+    	width: 85%;
+    	height: 72px;
+        margin-top: -100px;
+        margin-right: 170px;
     	   
     }
 
@@ -154,19 +133,31 @@ body{
     } 
 
    
+    .registrarse{
 
+        position: relative;
+        float: right;
+        margin-right: 20px;
+        margin-top: -90px;
+        
+
+    }
 
 
     /* FIN HEADER */
 
 
-    /* MEDIO main  */
+    /* MEDIO section  */
 
-    main{
+    
+
+    section{
 
     	margin:0 auto;
     	width: 100%;
-    	height: 500px;
+    	height: 760px;
+        background-color: #BDFBFB;
+        padding-top: 20px;
     }
 
     /* CON ESTO PODEMOS INSERTAR UNA FOTO DONDE QUERAMOS 
@@ -187,6 +178,7 @@ body{
 
     #headerLogin{ 
 
+        margin-top: 20px;
     	background-color: #5f86b2;
 	
 
@@ -222,17 +214,18 @@ body{
 
         background-color: #5f86b2;
     	width: 485px;
-    	height: 300px;
+    	height: 350px;
     	margin: 0 auto;
     	border: 6px solid #431FE4;
     	border-radius: 6px;
-        padding-top: 25px;
+        padding-top: 1px;
+        margin-top: 70px;
 
     }
 
     #formLogin{
 
-    	padding: 15px;
+    	padding: 5px;
     }
 
     /* CONFIGURACION DE LOS BOTONES */
@@ -253,12 +246,14 @@ body{
 
     /* CONFIGURACIÓN DE LOS BOTONES */
     
+    /*Usuario y contraseña */
     .user, .pass{
 
     	border: 2px solid white;
     	padding: 5px;
     	font-size: 26px;
     	margin-bottom: 10px;
+        width: 460px;
     }
 
      /* cuando se pasa el raton se pone azul blojito y las letras de color negro*/
@@ -270,14 +265,18 @@ body{
     	cursor: pointer;
     }
 
+    /*Entrar y borrar */
+
     .submit, .reset{
 
     	margin-top: 20px;
+        margin-left: 50px;
     	padding: 5px;
     	color: white;
     	background-color: #002147;
-    	font-size: 25px;
+    	font-size: 30px;
     	border: 0;
+
     }
 
 
@@ -325,8 +324,6 @@ body{
 
     /* Animacion en intermitente del usuario y contraseña incorrecto */
 
-        
-
     .mensaje:hover{
 
         cursor: pointer;
@@ -368,11 +365,28 @@ body{
      }
 
 
+   /* FIN DEL FORMULARIO */
 
+   
+   /* Footer es la parte inferior pie de página*/
 
+    
 
+    .footer {
 
+    background: #5080ef none repeat scroll 0 0;
+    border-radius: 5px;
+    bottom: 0;
+    display: flex;
+    height: 100px;
+    margin-top: -50px;
+    width: 100%;
+}
 
+    .footimg    {
 
-    /* FIN DEL FORMULARIO */
+    margin-left: 39%;
+    margin-top: 19px;
+    text-align: center;
+}
 

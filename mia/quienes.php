@@ -12,7 +12,7 @@
 		<title>Página de login Inicial</title>
 		<meta name="autor" content="Germán Luque Sanchez,"/>
 		<meta name="descripcion" content="Proyecto Germán tienda"/>
-		<link rel="stylesheet" type="text/css" href="css/estilo1.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="css/estilo3.css" media="screen">
 		 <!-- Required meta tags -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	     <!-- Bootstrap CSS -->
@@ -22,31 +22,41 @@
   <body>
 
 	</header>
-	
-		<nav class="navbar navbar-dark bg-dark">
-			<!-- Navbar content -->
-			<a href="index.php">INICIO</a>
-			<a href="quienes.php">QUIENES SOMOS</a>
-			<a href="hacemos.php">QUE HACEMOS</a>
-			<a href="contactos.php">CONTACTOS</a>
-
-			<form class="form-inline my-2 my-lg-0">
-      			<input class="form-control mr-sm-2" type="text" placeholder="Search">
-     			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    		</form>
-		
-		</nav>
-
-			
+	<!--el include menu de navegacion cabecera-->
+		<?php include('header.php');
+		?>	
 	</header>   
 
     	
        	
     <section>          
 	          
-	     <article>  	  	
+	     <article> 
+
+
+	     ONLINE ELECTRÓNICA 	  	
        
-		QUIENES
+		ONLINE ELECTRÓNICA está creado por un grupo humano de profesionales del sector, tanto en la venta de componentes informáticos de gama alta , como en montajes de PC´s a medida y servicio postventa a finales del año 2016.
+		La idea, surge atendiendo a la enorme demanda de muchos usuarios, los cuales nos remitían la necesidad de una "tienda online diferente", que diera la importancia, que se requiere a aspectos básicos, como son la atención personalizada y un servicio postventa de calidad.
+		En ONLINE ELECTRÓNICA, todos nuestros clientes recibirán una atención totalmente individualizada, y el asesoramiento necesario para poder adquirir el hardware que necesiten realmente y al mejor precio.
+		Otro aspecto diferencial de ONLINE ELECTRÓNICA es su insuperable servicio postventa//garantias. Queremos que nuestros clientes noten la diferencia. Para ello, disponemos de una batería de componentes destinados únicamente a acelerar nuestros procesos de RMA. Además nuestros clientes tendrán información constante, del estado de su incidencia. Por supuesto, totalmente individualizada.
+		ONLINE ELECTRÓNICA ,actualmente, trabaja  en calidad de reseller oficial, o Golden Reseller de los mas importantes fabricantes de hardware de alto rendimiento del panorama mundial. Tales como,Aerocool, Asus, Asrock, Msi, Gigabyte, Bequiet, Fractal, Thermaltake, Silverstone, In win, Roccat, Raccer, thermaltake, Silicon Power...Teniendo trato directo y constante con cada uno de ellos.
+ 
+		ONLINE ELECTRÓNICA esta localizada en:
+		C/ CIENCIAS 64 1º LOCAL G
+		C.P: 08907 (HOSPITALET DE LLOBREGAT)BARCELONA.
+		TEL: 673776640
+		DATOS SOCIALES:
+		CIF:  B95801345
+		Razon social: GERSAR COMERCIO ELECTRONICO SL 
+		Nombre comercial: ONLINE ELECTRÓNICA. 
+		MAILS DE CONTACTO:
+		ger@hotmail.com(incidencias)
+		pedidos@ger.es
+		consultas@ger.es
+		HORARIOS DE ATENCION TELEFONICA
+		L-J 10:00 a 14:00 y 15:00 a 18:00
+		V   10:00 a 15:00
 
 
 
@@ -58,9 +68,11 @@
 	</section>	
 
 
-	
-
-
+	<footer>
+	<!--el include el pie de página-->
+	<?php include('footer.php');
+		?>	
+	</footer>
 
 	
 	 <!-- Optional JavaScript -->
