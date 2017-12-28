@@ -68,9 +68,6 @@ margin-left: 250px;
 }
 
 
-
- 
-
 /*  aqui esta el pie de mi página de usuarios donde se vera el facebook, twiter,Pinterest	*/
 
 
@@ -117,4 +114,34 @@ margin-left: 250px;
 	text-decoration: none;
 	width: 3.2rem;
 
+}
+
+/*  Validación html5 */
+
+input:invalid {
+ 
+border: 1px solid red;
+ 
+}
+ 
+/* Estilo por defecto */
+ 
+input:valid {
+ 
+border: 1px solid green;
+ 
+}
+
+/* Estilo por defecto */
+ 
+input:required:invalid {
+ 
+border: 1px solid red;
+ 
+}
+ 
+input:required:valid {
+ 
+border: 1px solid green;
+ 
 }

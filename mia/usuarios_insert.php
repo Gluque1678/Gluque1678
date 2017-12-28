@@ -13,6 +13,8 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	     <!-- Bootstrap CSS -->
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    	
        	
   	</head>
   
@@ -31,130 +33,153 @@
 
 	<section>
 
+		<!--FORMULARIO-->
+
 		<article>
 
-		<div class="alert alert-warning"><strong><h1><center>Rellena el Formulario</center></h1></strong>
-		</div>
+		<form name="f1" action="usuarios_insert.proc.php" method="POST" onsubmit="return validar();">
 
-		<div class="alert alert-success" role="alert" style="margin-top: -16px;">
-			 <div class="alert-heading">
-			  				
-				<div class="input-group">
-			      <span class="input-group-btn">
-			         <button class="btn btn-primary" type="button">Nombre</button>
-			      </span>
-			      	<input type="text" class="form-control" placeholder="" />
-			      	<span class="input-group-addon">
-			        	 <span class="fa fa-user fa-lg" style="color: blue;"></span>
-			      	</span>
-			    </div>
+			<div class="alert alert-warning"><strong><h1><center>Rellena el Formulario</center></h1></strong>
+			</div>
 
-				</br>
+				<div class="alert alert-success" role="alert" style="margin-top: -16px;">
+				<div class="alert-heading">
+					  				
+						<div class="input-group">
+					      <span class="input-group-btn">
+					         <button class="btn btn-primary" type="button">Nombre</button>
+					      </span>
+					      	<input type="text" name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required class="form-control" placeholder="" />
+					      	<span class="input-group-addon">
+					        	 <span class="fa fa-user fa-lg" style="color: blue;"></span>
+					      	</span>
+					    </div>
 
-				<div class="input-group">
-			      <span class="input-group-btn">
-			         <button class="btn btn-success" type="button">Apellidos</button>
-			      </span>
-			      <input type="text" class="form-control" placeholder="" />
-			      	<span class="input-group-addon">
-			        	 <span class="fa fa-user fa-lg" style="color: green;"></span>
-			      	</span>
-			    </div>
+						</br>
 
-			    </br>
-			  
-			  	<div class="input-group">
-			      <span class="input-group-btn">
-			         <button class="btn btn-info" type="button">Correo</button>
-			      </span>
-			      <input type="text" class="form-control" placeholder="" />
-			      	<span class="input-group-addon">
-			        	<span class="fa fa-at fa-lg" style="color: #33FFEC;"></span>
-			      	</span>
-			    </div>
+						<div class="input-group">
+					      <span class="input-group-btn">
+					         <button class="btn btn-success" type="button">Apellidos</button>
+					      </span>
+					      <input type="text" name="apellido" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}" required class="form-control" placeholder="" />
+					      	<span class="input-group-addon">
+					        	 <span class="fa fa-user fa-lg" style="color: green;"></span>
+					      	</span>
+					    </div>
 
-				</br>
+					    </br>
+					  
+					  	<div class="input-group">
+					      <span class="input-group-btn">
+					         <button class="btn btn-info" type="button">Correo</button>
+					      </span>
+					      <input type="text" name="mail" required class="form-control" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="" />
+					      	<span class="input-group-addon">
+					        	<span class="fa fa-at fa-lg" style="color: #33FFEC;"></span>
+					      	</span>
+					    </div>
 
-				<div class="input-group">
-			      <span class="input-group-btn">
-			         <button class="btn btn-warning" type="button">Teléfono</button>
-			      </span>
-			      <input type="text" class="form-control" placeholder="" />
-			      	<span class="input-group-addon">
-			        	<span class="fa fa-phone fa-lg" style="color: #DCD415;"></span>
-			      	</span>
-			    </div>
+						</br>
 
-				</br>
+						<div class="input-group">
+					      <span class="input-group-btn">
+					         <button class="btn btn-warning" type="button">Teléfono</button>
+					      </span>
+					      <input type="text" name="telefono" pattern="^[9|8|7|6]\d{8}$" required class="form-control" placeholder="" />
+					      	<span class="input-group-addon">
+					        	<span class="fa fa-phone fa-lg" style="color: #DCD415;"></span>
+					      	</span>
+					    </div>
 
-				<div class="input-group">
-			      <span class="input-group-btn">
-			         <button class="btn btn-default" type="button">Dni</button>
-			      </span>
-			      <input type="text" class="form-control" placeholder="" />
-			      	<span class="input-group-addon">
-			        	<span class="fa fa-newspaper-o fa-lg" style="color: black;"></span>
-			      	</span>
-			    </div>
+						</br>
 
-				</br>
+						<div class="input-group">
+					      <span class="input-group-btn">
+					         <button class="btn btn-secondary" type="button">Teléfono Móvil</button>
+					      </span>
+					      <input type="text" name="telefono" pattern="^[9|8|7|6]\d{8}$" required class="form-control" placeholder="" />
+					      	<span class="input-group-addon">
+					        	<span class="fa fa-phone fa-lg" style="color: black;"></span>
+					      	</span>
+					    </div>
 
-				<div class="input-group">
-			      <span class="input-group-btn">
-			         <button class="btn btn-dark" type="button">Contraseña</button>
-			      </span>
-			      <input type="text" class="form-control" placeholder="" />
-			      	<span class="input-group-addon">
-			        	 <i class="fa fa-lock fa-spin fa-xs fa-lg" style="color: black;"></i>
-			        	 <span class="sr-only">Loading...</span>
-			      	</span>
-			    </div>
+					    </br>
 
-				</br>
+						<div class="input-group">
+					      <span class="input-group-btn">
+					         <button class="btn btn-default" type="button">Dni</button>
+					      </span>
 
-				<div class="input-group">
-			      <span class="input-group-btn">
-			         <button class="btn btn-danger" type="button">Comprobar</button>
-			      </span>
-			      <input type="text" class="form-control" placeholder="" />
-			      	<span class="input-group-addon">
-			        	 <i class="fa fa-unlock fa-spin fa-lg fa-fw" style="color: red;"></i>
-			        	 <span class="sr-only">Loading...</span>
-			      	</span>
-			    </div>
+					      <!--Recoge tanto nie como dni-->
+
+					      <input type="text" name="dni" pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" required class="form-control" placeholder="" />
+					      	<span class="input-group-addon">
+					        	<span class="fa fa-newspaper-o fa-lg" style="color: black;"></span>
+					      	</span>
+					    </div>
+
+						</br>
+
+						<div class="input-group">
+					      <span class="input-group-btn">
+					         <button class="btn btn-dark" type="button">Contraseña</button>
+					      </span>
+					      <input type="text" name="password" pattern="[A-Za-z0-9!?-]{8,12}" required class="form-control" placeholder="" />
+					      	<span class="input-group-addon">
+					        	 <i class="fa fa-lock fa-spin fa-xs fa-lg" style="color: black;"></i>
+					        	 <span class="sr-only">Loading...</span>
+					      	</span>
+					    </div>
 
 
-		    	</br>
 
-		    	<div class="input-group">
-			      <span class="input-group-btn">
-			         <button class="btn btn-secondary" type="button">Foto</button>
-			      </span>
-			      <input type="file" class="form-control" placeholder="" />
-			      	<span class="input-group-addon">
-			        	 <span class="fa fa-camera-retro fa-lg" style="color: black;"></span>
-			      	</span>
-			    </div>
+						</br>
 
-			    <input type="hidden" name="activo" value="1">
+						<div class="input-group">
+					      <span class="input-group-btn">
+					         <button class="btn btn-danger" type="button">Repetir</button>
+					      </span>
+					      <input type="text" name="clave2" pattern="[A-Za-z0-9!?-]{8,12}" required class="form-control" placeholder="" />
+					      	<span class="input-group-addon">
+					        	 <i class="fa fa-unlock fa-spin fa-lg fa-fw" style="color: red;"></i>
+					        	 <span class="sr-only">Loading...</span>
+					      	</span>
+					    </div>
 
-			    </br>
 
-		
-				<button type="button" class="btn btn-info btn-xs" >
-	        		 <span class="fa fa-floppy-o fa-2x" style="color: white;"></span> Registrar
-	      		</button>
+				    	</br>
 
-	     		<button type="button" class="btn btn-warning btn-xs" onclick="window.location.href='index.php'">
-	       		  <span class="fa fa-caret-left fa-2x" style="color: black;"></span>
-	       		   <a href="index.php">Volver</a>
-	      		</button> 
+				    	
+
+				    	<!--<div class="input-group">
+					      <span class="input-group-btn">
+					         <button class="btn btn-secondary" type="button">Foto</button>
+					      </span>
+					      <input type="file" name="foto" required id="foto" class="form-control" placeholder="" />
+					      	<span class="input-group-addon">
+					        	 <span class="fa fa-camera-retro fa-lg" style="color: black;"></span>
+					      	</span>
+					    </div>-->
+
+					   	</br>
+
+					   	<input type="hidden" name="activo" value="1">
 
 				
-			</div> 
-		</div>
+						<button type="submit" onclick="validar()" name="registro" class="btn btn-info btn-xs">
+			        		 <span class="fa fa-floppy-o fa-2x" style="color: white;"></span> Registrar
+			      		</button>
 
-			   
+			     		<button type="button" class="btn btn-warning btn-xs" onclick="window.location.href='index.php'">
+			       		  <span class="fa fa-caret-left fa-2x" style="color: black;"></span>
+			       		   <a href="index.php">Volver</a>
+			      		</button> 
+
+						
+			</div> 
+			</div>
+
+		</form>	   
   				
 
   				

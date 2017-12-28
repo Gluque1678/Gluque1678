@@ -80,6 +80,12 @@ $con = mysqli_connect("localhost", "root", "", "montse");
 
 		?>
 
+		<div class="input-group">
+			<span class="input-group-btn">
+				<button class="btn btn-primary" type="button" style="margin-top: -60px; margin-left: 400px; height: 35px;">Actualizar</button>
+			</span>
+		</div>
+
 		<br/><br/>
 
 		<?php
@@ -121,18 +127,20 @@ $con = mysqli_connect("localhost", "root", "", "montse");
 							
 						<div class="col-sm-4">
 							<div class="card">	
-								<img class="card-img-top" src="./img/material/<?php echo $prod['imagen'];?>" style="width:300px;height:300px" alt="">
+								<img class="card-img-top" src="./img/material/<?php echo $prod['id_material']; ?>/<?php echo $prod['id_material'];?>.jpg" style="width:300px;height:300px" alt="">
 								 				
 								 <div class="card-body">
 									<h4 class="card-title"><strong><?php echo utf8_encode($prod['nombre']);?></strong></h4>
 									<p class="card-text"> <?php echo utf8_encode($prod['descripcion']);?> </p>
 								 </div>
 									    
-								<div class="card-footer">
+								<div class="card-footer"><!--Se pasa la variable para que se vea el producto en detalles.php-->
 										<h5><small class="text-primary"> Precio <?php echo $prod['precio'];?> €</small></h5>
-										<button type="button" class="btn btn-primary" onclick="window.location.href='detalles.php'">
-											<h5><a class="text-muted" href="detalles.php">Mostrar Producto</a></h5>
-										</button>
+										<a class="text-muted" href="detalles.php?producto=<?php echo $prod['id_material'] ?>">
+											<button type="button" class="btn btn-primary">
+												<h5>Mostrar Producto</h5>
+											</button>
+										</a>
 								</div>
 							</div>
 						</div>	
@@ -141,7 +149,7 @@ $con = mysqli_connect("localhost", "root", "", "montse");
 	  		<?php }	 //fin while
 
 	  		 ?>
-			</div>
+				</div>
 
 		</article> 
 	</section>	
