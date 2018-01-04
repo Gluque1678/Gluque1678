@@ -2,25 +2,25 @@
 	
 	//Imagen Avatar
 	
-	//$foto=$FILES["foto"]["name"];
-	//$ruta=$_FILES["foto"]["tmp_name"];
-	//$destino="img/avatar/".$foto;
-	//copy($ruta, $destino);
+	$foto=$_FILES["foto"]["name"];
+	$ruta=$_FILES["foto"]["tmp_name"];
+	$destino="img/avatar/".$foto;
+	copy($ruta, $destino);
 
-	$nombre = mb_strtolower($_REQUEST['nombre'], 'UTF-8');
-	$apellidos = mb_strtolower($_REQUEST['apellido'], 'UTF-8');
-	$correo = mb_strtolower($_REQUEST['mail'], 'UTF-8');
+	$nombre = mb_strtolower($_REQUEST['usu_nombre'], 'UTF-8');
+	$apellidos = mb_strtolower($_REQUEST['usu_apellido'], 'UTF-8');
+	$correo = mb_strtolower($_REQUEST['usu_mail'], 'UTF-8');
 
 	//realizamos la conexión con mysql
 	$con = mysqli_connect('localhost', 'root', '', 'montse');
 	$sql =	"INSERT INTO tbl_usuario (usu_nombre, usu_apellido, usu_mail, telefono, dni, usu_password, img, usu_actiu)
-	VALUES ('$_REQUEST[nombre]', '$_REQUEST[apellido]', '$_REQUEST[mail]', '$_REQUEST[telefono]', '$_REQUEST[dni]', md5('$_REQUEST[password]'), 1)"; 
+	VALUES ('$_REQUEST[nombre]', '$_REQUEST[apellido]', '$_REQUEST[mail]', '$_REQUEST[telefono]', '$_REQUEST[dni]', md5('$_REQUEST[password]'), '$foto', 1)"; 
 
 	echo $sql;
 	//lanzamos la sentencia $sql
 	$datos = mysqli_query($con, $sql);
 
-	//header("location: index.php");
+	header("location: index.php");
 
 ?>	
 

@@ -20,7 +20,7 @@
 			   	clave1 = document.f1.password.value 
 			   	clave2 = document.f1.clave2.value 
 
-			   	if (clave1 == clave2) 
+			   if (clave1 == clave2) 
 			      	alert("Las dos claves son iguales...\nRealizaríamos las acciones del caso positivo") 
 			   	else 
 			      	alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo") 
@@ -29,39 +29,50 @@
     	
        	
   	</head>
-  
-<body>
+
+  	<body>
+
+  		<!--el include menu de navegacion cabecera-->
+				<?php include('header.php');
+				?>	
 
 
-	<header>
+  		<section>
+  			<article>
 
-		<!--el include menu de navegacion cabecera-->
-		<?php include('header.php');
-		?>	
+		<!--Conectamos con la base de datos -->
 
-	</header>
+				<?php
+						//iniciamos sesión - SIEMPRE TIENE QUE ESTAR EN LA PRIMERA LÍNEA
+						session_start();
 
-	
+					//conexion a la base de datos o mensaje en caso de error
 
-	<section>
+					$con = mysqli_connect("localhost", "root", "", "montse");
+
+					//si no se puede realizar la conexión, mostramos error
+						if (!$con) {
+							echo "Error: No se puede conectar a la BD." . PHP_EOL;
+							exit;
+						}	
+
+				?>
 
 		<!--FORMULARIO-->
 
-		<article>
-
 		<form name="f1" action="usuarios_insert.proc.php" method="POST" onsubmit="return validar();">
-
+		
 			<div class="alert alert-warning"><strong><h1><center>Rellena el Formulario</center></h1></strong>
 			</div>
 
-				<div class="alert alert-success" role="alert" style="margin-top: -16px;">
-				<div class="alert-heading">
+					<div class="alert alert-success" role="alert" style="margin-top: -16px;">
+					<div class="alert-heading">
 					  				
 						<div class="input-group">
 					      <span class="input-group-btn">
 					         <button class="btn btn-primary" type="button">Nombre</button>
 					      </span>
-					      	<input type="text" name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required class="form-control" placeholder="" />
+					      	<input type="text" name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required class="form-control" placeholder=""  />
 					      	<span class="input-group-addon">
 					        	 <span class="fa fa-user fa-lg" style="color: blue;"></span>
 					      	</span>
@@ -187,49 +198,64 @@
 			        		 <span class="fa fa-floppy-o fa-2x" style="color: white;"></span> Registrar
 			      		</button>
 
-			     		<button type="button" class="btn btn-warning btn-xs" onclick="window.location.href='index.php'">
+			     		<button type="button" class="btn btn-warning btn-xs" onclick="window.location.href='usuario.php'">
 			       		  <span class="fa fa-caret-left fa-2x" style="color: black;"></span>
-			       		   <a href="index.php">Volver</a>
+			       		  <a href="usuario.php">Volver</a>
 			      		</button> 
 
 						
 			</div> 
 			</div>
 
-		</form>	   
-  				
 
-  				
-		    <!--Paginacion
-   
-   			<div class="btn-group">
-	         <button type="button" class="btn btn-info">4</button>
-	         <button type="button" class="btn btn-warning">5</button>
-	         <button type="button" class="btn btn-primary">6</button>
-	         <button type="button" class="btn btn-danger">7</button>
-	      	</div>-->
+				<?php
+
+					
+					//Realizamos la conexion
+
+					include ('conexion.proc.php');
 
 
+					//Sentencia para mostrar todos los materiales que dispone mi tienda de la tabla tbl_material
 
+					$sql = ("select * from tbl_usuario")or die(mysql_error());
+
+					//mostramos la consulta para ver por pantalla si es lo que esperábamos o o 
+					//echo "$sql<br/>";
+
+					//lanzamos la sentencia sql
+
+					$datos = mysqli_query($con, $sql);
+
+					$contador = mysqli_num_rows($datos);	
+
+						//echo '';
+					
+					while ($prod = mysqli_fetch_array($datos)){ 
+						
+						
+			
+				?>
+	
+
+				
+		</form>	  
+
+		<?php }	 //fin while
+
+	  	?>
+				</div> 
+  			
 		</article>
-
-
 
 	</section>
 	
 	<footer>
 
 			<?php
-
 				include "footer.php";
-
 			?>
-
-
-
-
 	</footer>
-
 
 	<!--Optional JavaScript-->
     <!--jQuery first, then Popper.js, then Bootstrap JS-->
@@ -238,7 +264,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
-</body>
+  </body>
 
 </html>
