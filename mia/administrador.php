@@ -80,18 +80,18 @@
 
 
  	   
- 			<table bgcolor="#00ff00"; border="1" style="width:1900px; <tbody>">
+ 			<table bgcolor="#00ff00"; border="5" style="width:1880px;">
        
 
 		        <tr>
-		         	 <th style=width:15% text align="left"><h3>Alta Usuarios</h3> </th>
+		         	 <th style=width:20% text align="left"><h3>Alta Usuarios</h3> </th>
 		         	 <th style=width:15% text align="left"><h3>Email</h3> </th>
 		         	 <th style=width:15% text align="left"><h3>Contraseña </h3> </th>
 		         	 <th style=width:10% text align="left"><h3>Teléfono</h3> </th>
 		         	 <th style=width:10% text align="left"><h3>Dni</h3> </th>
 		         	 <th style=width:8%  text align="left"><h3>Rol</h3> </th>
 		        	 <th style=width:8%  text align="left"><h3>Activos</h3> </th>
-		         	 <th style=width:35% text align="right"><h3>Modificaciones</h3> </th>
+		         	 <th style=width:25% text align="center"><h3>Modificaciones</h3> </th>
 		               
 		        </tr>
 
@@ -103,18 +103,19 @@
 		       
 		        while ($prod = mysqli_fetch_array($datos)){
 
-		        echo "";
-		        echo "<a href='administradorver.php?id=$prod[id_usu]'></a>";
+		        /* Con este primer td mostrara el nombre y apellidos del usuario en otra página administradorver.php ademas el email,password,telefono,dni,nivel,activo o no activo*/
+		        echo "<td>";
+		        echo "<a href='administradorver.php?id=$prod[id_usu]'>$prod[usu_nombre]&nbsp$prod[usu_apellido]</a>";
 		        echo "</td>
 
-		          		<td>$prod[usu_nombre]&nbsp$prod[usu_apellido]&nbsp&nbsp&nbsp</td>
-		          		<td>" .substr($prod['usu_mail'], 0, 25) .  "</td>
-		          		<td>" .substr($prod['usu_password'], 0, 25) .  "</td>
-		          		<td>$prod[telefono]</td>
+		          		
+		          		<td>" .substr($prod['usu_mail'], 0, 30) .  "</td>
+		          		<td>" .substr($prod['usu_password'], 0, 35) .  "</td>
+		          		<td>" .substr($prod['telefono'], 0, 12) .  "</td>
 		          		<td>$prod[dni]</td>
-		          		<td>&nbsp&nbsp&nbsp$prod[usu_nivel]</td>
-		          		<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$prod[usu_actiu]</td>
-		          		<td></td>
+		          		<td>$prod[usu_nivel]</td>
+		          		<td>$prod[usu_actiu]</td>
+		          		
 		          		
 		          		<td>";
 		           
@@ -122,32 +123,34 @@
 				          //enlace a la página que modifica el producto pasándole la id (clave primaria)
 				          if($prod['usu_actiu']==1){
 				            
-				            echo  "<a href='administradormodificar.php?id=$prod[id_usu]'><i class='fa fa-pencil fa-2x fa-pull-left fa-border' title='modificar'></i></a>";
+				            echo  "<a href='administradormodificar.php?id=$prod[id_usu]'><i class='fa fa-pencil fa-2x fa-pull-left fa-border' title='modificar' style='color: red; margin-left: 25px;'></i></a>";
 				          }
 				 
 
 				          //enlace a la página que elimina el producto pasándole la id (clave primaria)
 				          if($prod['usu_actiu']==1){
-				            echo "<a href='administradoreliminar.php?id=$prod[id_usu]'><i class='fa fa-trash fa-2x fa-pull-left fa-border' title='borrar'></i></a>";
+				            echo "<a href='administradoreliminar.php?id=$prod[id_usu]'><i class='fa fa-trash fa-2x fa-pull-left fa-border' title='borrar' style='color: red; margin-left: 25px;'></i></a>";
 				          }
 
 				          //enlace a la página que modifica el producto (poniendo el campo pro_actiu a 0 o a 1, lo activa o lo desactiva) pasándole la id (clave primaria)
 				          if($prod['usu_actiu']==1){
-				            echo "<a href='administradoractivar_desactivar.proc.php?id=$prod[id_usu]'><i class='fa fa-eye-slash fa-2x fa-pull-left fa-border' title='desactivar'></i></a>";
+				            echo "<a href='administradoractivar_desactivar.proc.php?id=$prod[id_usu]'><i class='fa fa-eye-slash fa-2x fa-pull-left fa-border' title='desactivar' style='color: red; margin-left: 25px;'></i></a>";
 				          } else {
+
 				        
-				        echo "</td>
+				  echo "</td>
 
 
-		            <td><a href='administradoractivar_desactivar.proc.php?id=$prod[id_usu]'><i class='fa fa-eye fa-2x fa-pull-left fa-border' title='activar'></i></a>";
-		          }
+		            	<td><a href='administradoractivar_desactivar.proc.php?id=$prod[id_usu]'><i class='fa fa-eye fa-2x fa-pull-left fa-border' title='activar'></i></a>";
+				          }
 
-		          echo "</a><td>
-		          </tr>";
+				  echo "</a><td>
+				          
+				        </tr>";
 
-		        }
+		        		}
 
-		        ?>
+		          ?>
      
      			 </br>
       		
