@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!--Página administradorinsertar-->
 <html>
 	
 	<head>
@@ -95,7 +95,7 @@
 
 						<div class="input-group">
 					      <span class="input-group-btn">
-					         <button class="btn btn-warning" type="button">Teléfono</button>
+					         <button class="btn btn-warning" type="button">Teléfono Fijo</button>
 					      </span>
 					      <input type="text" name="telefonofijo" pattern="^[9|8|7|6]\d{8}$" required class="form-control" placeholder="" />
 					      	<span class="input-group-addon">
@@ -103,7 +103,7 @@
 					      	</span>
 					    </div>
 
-					    </br>
+						</br>
 
 						<div class="input-group">
 					      <span class="input-group-btn">
@@ -167,7 +167,7 @@
 					   
 				    	</br>
 				    	
-				    	<div class="input-group">
+				    	<!--<div class="input-group">
 					      <span class="input-group-btn">
 					         <button class="btn btn-secondary" type="button">Foto</button>
 					      </span>
@@ -175,7 +175,7 @@
 					      	<span class="input-group-addon">
 					        	 <span class="fa fa-camera-retro fa-lg" style="color: black;"></span>
 					      	</span>
-					    </div>
+					    </div>-->
 
 					   	</br>
 
@@ -186,9 +186,9 @@
 			        		 <span class="fa fa-floppy-o fa-2x" style="color: white;"></span> Registrar
 			      		</button>
 
-			     		<button type="button" class="btn btn-warning btn-xs" onclick="window.location.href='index.php'">
+			     		<button type="button" class="btn btn-warning btn-xs" onclick="window.location.href='administrador.php'">
 			       		  <span class="fa fa-caret-left fa-2x" style="color: black;"></span>
-			       		   <a href="index.php">Volver</a>
+			       		   <a href="administrador.php">Volver</a>
 			      		</button> 
 
 						

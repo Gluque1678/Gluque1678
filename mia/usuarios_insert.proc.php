@@ -13,8 +13,8 @@
 
 	//realizamos la conexión con mysql
 	$con = mysqli_connect('localhost', 'root', '', 'montse');
-	$sql =	"INSERT INTO tbl_usuario (usu_nombre, usu_apellido, usu_mail, telefono, dni, usu_password, img, usu_actiu)
-	VALUES ('$_REQUEST[nombre]', '$_REQUEST[apellido]', '$_REQUEST[mail]', '$_REQUEST[telefono]', '$_REQUEST[dni]', md5('$_REQUEST[password]'), '$foto', 1)"; 
+	$sql =	"INSERT INTO tbl_usuario (usu_nombre, usu_apellido, usu_mail, telefono, dni, telefonofijo, usu_password, img, usu_actiu)
+	VALUES ('$_REQUEST[nombre]', '$_REQUEST[apellido]', '$_REQUEST[mail]', '$_REQUEST[telefono]','$_REQUEST[dni]', '$_REQUEST[telefonofijo]', md5('$_REQUEST[password]'), '$foto', 1)"; 
 
 	echo $sql;
 	//lanzamos la sentencia $sql

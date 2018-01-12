@@ -52,7 +52,8 @@
 						<th>Alta Usuarios</th>
 						<th>Email</th>
 						<th>Contraseña</th>
-						<th>Teléfono</th>
+						<th>Teléfono Fijo</th>
+						<th>Teléfono Movil</th>
 						<th>DNI</th>
 						<th>Rol</th>
 						<th>Activo</th>
@@ -68,8 +69,9 @@
 						echo "<tr>
 
 						<td>$prod[usu_nombre]&nbsp$prod[usu_apellido]</td>
-						<td>" . substr($prod['usu_mail'], 0, 30) . "</td>
+						<td>" . substr($prod['usu_mail'], 0, 28) . "</td>
 						<td>" . substr($prod['usu_password'], 0, 35) . "</td>
+						<td>" . substr($prod['telefonofijo'], 0, 12) . "</td>
 						<td>" . substr($prod['telefono'], 0, 12) . "</td>
 						<td>$prod[dni]</td>
 						<td>$prod[usu_nivel]</td>
@@ -99,7 +101,7 @@
 							<button class="btn btn-primary btn-sm" type="button" style="margin-top: -30px; margin-left: 15px;" onclick="window.location.href='administrador.php'">VOLVER</button>
 						</span>
 					</div>
-					<a href="administrador.php">Volver</a>
+					
 
 	<footer>
 
