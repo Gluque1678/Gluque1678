@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>Tienda Virtual administradormodificar</title>
+		<title>Tienda Virtual editarusuario.proc.php</title>
 	</head>
 
 	<body>
@@ -17,7 +17,7 @@
 			//lanzamos la sentencia sql
 			$datos = mysqli_query($con, $sql);
 
-			header("location: administrador.php")
+			header("location: usuario.php")
 		?>
 	</body>
 

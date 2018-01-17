@@ -49,7 +49,7 @@
 
 		<article>
 
-		<form name="f1" action="usuarios_insert.proc.php" method="POST" onsubmit="return validar();">
+		<form name="f1" action="administradorinsertar.proc.php" method="POST" onsubmit="return validar();">
 
 			<div class="alert alert-warning"><strong><h1><center>Rellena el Formulario</center></h1></strong>
 			</div>

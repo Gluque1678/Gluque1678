@@ -82,7 +82,7 @@ $con = mysqli_connect("localhost", "root", "", "montse");
 
 		<div class="input-group">
 			<span class="input-group-btn">
-				<button class="btn btn-primary" type="button" style="margin-top: -60px; margin-left: 480px; height: 35px;" onclick="window.location.href='editarusuario.php'" >Actualizar</button>
+			<a href="editarusuario.php"> <button class="btn btn-primary" type="button" style="margin-top: -60px; margin-left: 480px; height: 35px;">Actualizar</button></a> 
 			</span>
 		</div>
 

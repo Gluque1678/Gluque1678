@@ -50,6 +50,7 @@
 		<article>
 
 		<form name="f1" action="usuarios_insert.proc.php" method="POST" onsubmit="return validar();">
+			<input type="hidden" name="id" value="<?php echo $prod['id_usu']; ?>">
 
 			<div class="alert alert-warning"><strong><h1><center>Rellena el Formulario</center></h1></strong>
 			</div>
@@ -61,7 +62,7 @@
 					      <span class="input-group-btn">
 					         <button class="btn btn-primary" type="button">Nombre</button>
 					      </span>
-					      	<input type="text" name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required class="form-control" placeholder="" />
+					      	<input type="text" name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required class="form-control" placeholder=""  value="<?php echo $prod['usu_nombre']; ?>"/>
 					      	<span class="input-group-addon">
 					        	 <span class="fa fa-user fa-lg" style="color: blue;"></span>
 					      	</span>

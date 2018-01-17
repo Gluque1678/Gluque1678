@@ -9,7 +9,7 @@
 
 	//preparamos la consulta que intenta encontrar el usuario Y la contraseña introducidos
 	$sql = "SELECT * FROM tbl_usuario WHERE usu_mail='$_REQUEST[mail]' AND usu_password='$pass_encriptada'";
-	echo $sql;
+	
 	//ejecutamos la consulta
 	$resultado = mysqli_query($con,$sql);
 
@@ -23,6 +23,9 @@
 		$_SESSION['nombre']=$datos_usuario['usu_nombre'];
 		$_SESSION['apellido']=$datos_usuario['usu_apellido'];
 		$_SESSION['nivel']=$datos_usuario['usu_nivel'];
+		$_SESSION['id_usu']=$datos_usuario['id_usu'];
+		
+		
 
 		//redirigimos a la página principal
 		header("location: usuario.php");

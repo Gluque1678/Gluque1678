@@ -29,7 +29,7 @@
 				
 				<?php
 					//realizamos la conexión con mysql
-					$con = mysqli_connect('localhost', 'root', '', 'montse');
+					$con = mysqli_connect('localhost','root', '','montse');
 
 					//esta consulta devuelve todos los datos del producto cuyo campo clave (pro_id) es igual a la id que nos llega por la barra de direcciones
 					$sql = "SELECT * FROM tbl_usuario WHERE id_usu=$_REQUEST[id]";
@@ -40,11 +40,12 @@
 					//lanzamos la sentencia sql que devuelve el producto en cuestión
 					$datos = mysqli_query($con, $sql);
 					if(mysqli_num_rows($datos)>0){
-						$prod=mysqli_fetch_array($datos);
+					$prod=mysqli_fetch_array($datos);
+					
 				?>
 
 					
-					<form name="formulario1" action="administradormodificar.proc.php" method="post">
+					<form name="f1" action="administradormodificar.proc.php" method="post">
 						<input type="hidden" name="id" value="<?php echo $prod['id_usu']; ?>">
 
 						<!--Aqui pondremos el formulario que queremos modificar-->
@@ -91,26 +92,13 @@
 						</div>
 
 						
-						<!--<div class="input-group">
-							<span class="input-group-btn">
-								<button class="btn btn-dark" type="button">Contraseña</button>
-							</span>
-							      
-							<input type="text" name="password" pattern="[A-Za-z0-9!?-]{8,12}" required class="form-control" placeholder="" value="<?php echo $prod['usu_password']; ?>"/>
-							
-							<span class="input-group-addon">
-							    <i class="fa fa-lock fa-spin fa-xs fa-lg" style="color: black;"></i>
-							    <span class="sr-only">Loading...</span>
-							</span>
-						</div>-->
-
 						</br>
 
 						<div class="input-group">
 					      <span class="input-group-btn">
 					         <button class="btn btn-warning" type="button">Teléfono Fijo</button>
 					      </span>
-					      <input type="text" name="telefonofijo" pattern="^[9|8|7|6]\d{8}$" required class="form-control" placeholder="" value="<?php echo $prod['telefonofijo']; ?>"/>
+					      <input type="text" name="telefonofi" pattern="^[9|8|7|6]\d{8}$" required class="form-control" placeholder="" value="<?php echo $prod['telefonofijo']; ?>"/>
 					      	<span class="input-group-addon">
 					        	<span class="fa fa-phone fa-lg" style="color: #DCD415;"></span>
 					      	</span>
@@ -124,7 +112,7 @@
 							    <button class="btn btn-secondary" type="button">Teléfono Móvil</button>
 							</span>
 
-							<input type="text" name="telefono" pattern="^[9|8|7|6]\d{8}$" required class="form-control" placeholder="" value="<?php echo $prod['telefono']; ?>"/>
+							<input type="text" name="telefonomov" pattern="^[9|8|7|6]\d{8}$" required class="form-control" placeholder="" value="<?php echo $prod['telefono']; ?>"/>
 							<span class="input-group-addon">
 							    <span class="fa fa-phone fa-lg" style="color: black;"></span>
 							</span>
@@ -139,7 +127,7 @@
 
 						<!--Recoge tanto nie como dni-->
 
-							<input type="text" name="dni" pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" required class="form-control" placeholder="" value="<?php echo $prod['dni']; ?>"/>
+							<input type="text" name="dnii" pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" required class="form-control" placeholder="" value="<?php echo $prod['dni']; ?>"/>
 							<span class="input-group-addon">
 								<span class="fa fa-newspaper-o fa-lg" style="color: black;"></span>
 							</span>
@@ -147,7 +135,7 @@
 
 						</br>
 					
-						<button type="submit" name="registro" class="btn btn-info btn-xs" value="Guardar">
+						<button type="submit" class="btn btn-info btn-xs" value="Guardar">
 					        <span class="fa fa-floppy-o fa-2x" style="color: white;"></span> Guardar
 					    </button>
 
@@ -158,7 +146,7 @@
 						
 						<?php
 							} else {
-							echo "Producto con id=$_REQUEST[id] no encontrado!";
+							echo "tbl_usuario con id=$_REQUEST[id] no encontrado!";
 									}
 						//cerramos la conexión con la base de datos
 						mysqli_close($con);

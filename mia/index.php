@@ -113,8 +113,6 @@
 
 					<form id="formLogin" name="formLogin" action="login.proc.php" method="get">
 
-						
-									
 							<p>Usuario:</p>	  
 							<input id="user" class="user" type="email" name="mail" size="30" value="" autofocus required autocomplete="off">
 							
@@ -124,8 +122,7 @@
 							<input type="submit" class="submit" class="btn btn-primary btn-md"  name="entrar" value="ENTRAR">
 							<input type="reset" class="reset" class="btn btn-primary btn-md"  name="borrar" value="BORRAR">
 
-					
-					
+										
 					</form>
 
 				</div>
@@ -153,10 +150,6 @@
 			</div>
 
 		</article>
-
-			
-
-	
 		
 				
 	</section>

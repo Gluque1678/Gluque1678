@@ -33,27 +33,38 @@
 			
 	</header>   
 
-    	
+    <main>	
        	
-    <section>          
+    	<section>          
 	          
-	     <article>  	  	
+	    	 <article>  	  	
        
-		CONTACTOS
+			CONTACTOS
 
 
 
 
 
-		</article> 
-		
+			</article> 
+			
+			<?php include('quienesfooter.php');
+			?>	 
 	
-	</section>	
+		</section>	
 
 
 	
+	</main>
 
+	<aside>
 
+	</aside>
+
+	<footer>
+	<!--el include el pie de página-->
+	<?php include('footer.php');
+		?>	
+	</footer>
 
 	
 	 <!-- Optional JavaScript -->
