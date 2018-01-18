@@ -1,3 +1,5 @@
+<!--Por qué comprar-->
+
 <?php
 	//iniciamos sesión - SIEMPRE TIENE QUE ESTAR EN LA PRIMERA LÍNEA
 	session_start();
@@ -37,12 +39,29 @@
 	          
 	     		<article>  	
 
-	     		 	
-       
-				QUE HACEMOS
+		     		<img src="./img/compra/condicionescompra.jpg" class="img-fluid" style="width:380px;height:150px" alt=""> 	
+		     		<img src="./img/compra/condicionescompra3.png" class="img-fluid" style="width:1400px;height:200px" alt="">
+		     		
+		     		<div class="container-fluid">
 
-				<?php echo $_SESSION['nombre']; ?>
-				<?php echo $_SESSION['id_usu']; ?>
+		     			<div class="alert alert-danger" role="alert">
+						  <H6>Conoce toda la información relativa a tus envíos, devoluciones y garantías. ¡La información es poder! Echa un vistazo a nuestras Condiciones de Compra y adquiere tus artículos con la máxima confianza y tranquilidad.</H6>
+						</div>
+ 
+					</div>
+
+	     	</br></br></br></br>
+
+
+	     	
+       
+				</br></br></br></br>
+
+
+
+	     		<!--Con esto podemos traer cualquier variable a nuestra página las sesines se crean en login.proc-->
+				<!--<?php echo $_SESSION['nombre']; ?>
+				<?php echo $_SESSION['id_usu']; ?>-->
 				
 
 				<?php include('quienesfooter.php');

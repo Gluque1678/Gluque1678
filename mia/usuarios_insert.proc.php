@@ -13,12 +13,12 @@
 
 	//realizamos la conexión con mysql
 	$con = mysqli_connect('localhost', 'root', '', 'montse');
-	/*$sql =	"INSERT INTO tbl_usuario (usu_nombre, usu_apellido, usu_mail, telefono, dni, telefonofijo, usu_password, img, usu_actiu, usu_nivel)
-	VALUES ('$_REQUEST[nombre]', '$_REQUEST[apellido]', '$_REQUEST[mail]', '$_REQUEST[telefono]','$_REQUEST[dni]', '$_REQUEST[telefonofijo]', md5('$_REQUEST[password]'), '$foto', 1, 2)"; */
+	$sql =	"INSERT INTO tbl_usuario (usu_nombre, usu_apellido, usu_mail, telefono, dni, telefonofijo, usu_password, usu_actiu, usu_nivel)
+	VALUES ('$_REQUEST[nombre]', '$_REQUEST[apellido]', '$_REQUEST[mail]', '$_REQUEST[telefono]','$_REQUEST[dni]', '$_REQUEST[telefonofijo]', md5('$_REQUEST[password]'),1, 2)"; 
 	
 
-	$sql = "UPDATE tbl_usuario SET usu_nombre='$_REQUEST[nombre]', usu_apellido='$_REQUEST[apellido]', usu_mail='$_REQUEST[mail]', telefonofijo='$_REQUEST[telefonofi]', telefono='$_REQUEST[telefonomov]', dni='$_REQUEST[dnii]' WHERE id_usu='$_REQUEST[id]'";
-	echo $sql;
+	/*$sql = "UPDATE tbl_usuario SET usu_nombre='$_REQUEST[nombre]', usu_apellido='$_REQUEST[apellido]', usu_mail='$_REQUEST[mail]', telefonofijo='$_REQUEST[telefonofi]', telefono='$_REQUEST[telefonomov]', dni='$_REQUEST[dnii]' WHERE id_usu='$_REQUEST[id]'";
+	echo $sql;*/
 	//lanzamos la sentencia $sql
 	$datos = mysqli_query($con, $sql);
 
