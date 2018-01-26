@@ -5,7 +5,7 @@ $(buscar_datos());
 function buscar_datos(consulta){
 	$.ajax({
 
-	url: 'App/buscar.php',
+	url: 'mia/buscar.php',
 	type: 'POST)',
 	dataType: 'html',
 	data:{consulta: 'consulta'},
@@ -23,9 +23,9 @@ function buscar_datos(consulta){
 
 	}
 
-	$(document).on('Keyup', '#caja_busqueda', function(){
+	$(document).on('Keyup','#caja_busqueda', function(){
 		var valor = $(this).val();
-		if(valor !=""){
+		if(valor != "  "){
 			buscar_datos(valor);
 
 		} else {

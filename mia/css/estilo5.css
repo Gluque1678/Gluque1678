@@ -11,6 +11,15 @@ body{
 
 /* aqui esta el pie de mi página de administradores*/
 
+.form-control mr-sm-2	{
+
+	margin-top: 4px;
+	margin-left: 120px;
+}
+
+
+
+
 #seccion	{
 
 	margin-left: 15px;
