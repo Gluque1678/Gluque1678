@@ -2,6 +2,20 @@
 $(buscar_datos());
 
 
+	
+	$('#caja_busqueda').keyup(function(){
+		var valor = $(this).val();
+		if(valor != "  "){
+			
+			buscar_datos(valor);
+
+		} else {
+					buscar_datos();
+
+		}
+
+	});
+
 function buscar_datos(consulta){
 	$.ajax({
 
@@ -21,19 +35,4 @@ function buscar_datos(consulta){
 		console.log("error");
 	})
 
-	}
-
-	$(document).on('Keyup','#caja_busqueda', function(){
-		var valor = $(this).val();
-		if(valor != "  "){
-			buscar_datos(valor);
-
-		} else {
-					buscar_datos();
-
-		}
-	
-
-
-
-	});
+}
