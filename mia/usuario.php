@@ -175,7 +175,7 @@ $con = mysqli_connect("localhost", "root", "", "montse");
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!--Ventana modal-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   	 <script src="https: https://code.jquery.com/jquery-3.3.1.min.js"</script>
+   	<script src="https: https://code.jquery.com/jquery-3.3.1.min.js"</script>
 	</body>
 
 </html>

@@ -525,7 +525,7 @@
 					  <div class="card">
 					    <img class="card-img-top" src="./img/material/img20.jpg" alt="Card image cap" style="width:300px;height:300px">
 					    <div class="card-body">
-					      <h5 class="card-title">ASUS ROG</h5>
+					      <h5 class="card-title">ASUS ROG ORION</h5>
 					      <p class="card-text"></p>
 					    </div>
 					    <div class="card-footer">

@@ -22,7 +22,24 @@
     <!--Ventana modal-->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-	    <script src="js/main.js"></script>
+	    <!--
+			ESTE ES EL BUSCADOR ANTIGUO
+	    	<script src="js/main.js"></script>
+	    -->
+
+	    <script type="text/javascript">
+	      $(document).ready(function () {
+	          (function ($) {
+	              $('#filtrar').keyup(function () {
+	                  var rex = new RegExp($(this).val(), 'i');
+	                  $('.buscar tr').hide();
+	                  $('.buscar tr').filter(function () {
+	                    return rex.test($(this).text());
+	                  }).show();
+	              })
+	          }(jQuery));
+	      });
+	    </script>
 	</head>
 	
 	<body>
@@ -83,12 +100,15 @@
 
 		      ?>
 
-
+		     <div class="input-group"> <span class="input-group-addon">Buscar</span>
+		        <input id="filtrar" type="text" class="form-control" placeholder="Buscador">
+		      </div>
  	   
  			<table bgcolor="#00ff00"; border="5" style="width:1880px;">
        
 
-		        <tr>
+		        <thead>
+		        	<tr>
 		         	 <th style=width:18% text align="left"><h3>Alta Usuarios</h3> </th>
 		         	 <th style=width:15% text align="left"><h3>Email</h3> </th>
 		         	 <th style=width:15% text align="left"><h3>Contraseña </h3> </th>
@@ -99,9 +119,10 @@
 		        	 <th style=width:7%  text align="left"><h3>Activos</h3> </th>
 		         	 <th style=width:25% text align="center"><h3>Modificaciones</h3> </th>
 		               
-		        </tr>
+		        	</tr>
+		        </thead>
 
-   
+   				<tbody class="buscar">
 		        <?php
 
 		        /*recorremos los resultados y los mostramos por pantalla
@@ -110,7 +131,7 @@
 		        while ($prod = mysqli_fetch_array($datos)){
 
 		        /* Con este primer td mostrara el nombre y apellidos del usuario en otra página administradorver.php ademas el email,password,telefono,dni,nivel,activo o no activo*/
-		        echo "<td>";
+		        echo "<tr><td>";
 		        echo "<a href='administradorver.php?id=$prod[id_usu]'>$prod[usu_nombre]&nbsp$prod[usu_apellido]</a>";
 		        echo "</td>
 
@@ -151,14 +172,12 @@
 		            	<td><a href='administradoractivar_desactivar.proc.php?id=$prod[id_usu]'><i class='fa fa-eye fa-2x fa-pull-left fa-border' title='activar'></i></a>";
 				          }
 
-				  echo "</a><td>
-				          
-				        </tr>";
+				  echo "</a><td></tr>";
 
 		        		}
 
 		          ?>
-     
+     			</tbody>
      			 </br>
       		
       		</table>
