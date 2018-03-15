@@ -12,6 +12,6 @@
 				</div>
 			</div>
 
-			<a href="#" class="crunchify-top"><img src="img/botones/btt.png" style="float:right;" width="50px" height="50px"></a>
+			<a href="#" id="flecha" class="crunchify-top"><img src="img/botones/btt.png" style="float:right;" width="50px" height="50px"></a>
 
 </footer>

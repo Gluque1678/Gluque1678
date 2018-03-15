@@ -542,7 +542,6 @@
 				<?php include('quienesfooter.php');
 				?>	 
 
-
 				</article> 
 				
 	

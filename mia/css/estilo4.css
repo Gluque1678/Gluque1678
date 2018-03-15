@@ -133,11 +133,40 @@
 
 #tarjeta	{
 
-	margin-top: 600px;
+	margin-top: 400px;
 }
 
 #descripcion {
 
 	margin-top: -500px;
 	margin-left: 320px;
+}
+
+/*Posicion de la flecha de abajo*/
+
+/* como sera el boton que me lleve para arriba la flecha */
+.crunchify-top:hover {
+	background-color: #DBE6FF;
+	color: #fff !important;
+	text-decoration: none;
+
+}
+
+.crunchify-top {
+
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 3.2rem;
+	bottom: 1rem;
+	color: #fff;
+	cursor: pointer;
+	display=none;
+	font-size: 1.4rem;
+	height: 3.2rem;
+	line-height: 3.2rem;
+	position: fixed;
+	right: 1rem;
+	text-align: center;
+	text-decoration: none;
+	width: 3.2rem;
+
 }

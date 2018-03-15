@@ -34,7 +34,7 @@
 		?>	
 <!--fin menu cabecera-->
 
-<!--Cuerpo de la página-->
+<!--Carroussel 3d -->
 
 	<div class="content-all">
   		<div class="content-carrousel">
@@ -53,8 +53,9 @@
   			<figure><img src="img/material/img10.jpg"></figure>
 
 		</div>
-
 	</div>
+
+	<!--Carroussel 3d -->
 
 	<!--INSERTAR CONTENIDO-->
 
@@ -137,6 +138,7 @@
 								<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>_3.jpg" class="img-responsive" alt="">
 								<img src="./img/material/<?php echo $idproducto ?>/<?php echo $idproducto ?>_4.jpg" class="img-responsive" alt="">
 								
+							    <!--descripcion en el css-->
 							    <h6><p class="card text-white bg-primary mb-3" id="descripcion"> <?php echo utf8_encode($prod['descripcion']);?> </p></h6>
 							    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 							    <a href="usuario.php" class="btn btn-primary">Go somewhere</a>

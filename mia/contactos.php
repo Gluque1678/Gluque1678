@@ -33,11 +33,11 @@
        	
     	<section>  
 
-    		</br>        
+    	</br>        
 	          
 	    	<article>  	  	
        
-				<form name="f1" action="usuarios_insert.proc.php" method="POST" onsubmit="return validar();">
+			<form name="f1" action="contactos_insert.proc.php" method="POST" onsubmit="return validar();">
 			
 
 				<div class="alert alert-warning"><strong><h1><center>Rellena el Formulario</center></h1></strong>
@@ -86,11 +86,11 @@
 						  <div class="input-group-prepend btn btn-outline-secondary">
 						    <span class="input-group-text">Comentario</span>
 						  </div>
-						  <textarea class="form-control" aria-label="With textarea"></textarea>
+						  <textarea class="form-control" name="comentario" aria-label="With textarea"></textarea>
 						</div>
 
-					      								   
-				    	</br>
+						</br>      								   
+				    
 
 				    	<!--<div class="input-group">
 					      <span class="input-group-btn">
@@ -102,9 +102,9 @@
 					      	</span>
 					    </div>-->
 
-					   	</br>
+					   
 
-					   	<input type="hidden" name="activo" value="1">
+					   <!--<input type="hidden" name="activo" value="1">-->
 
 				
 						<button type="submit" onclick="validar()" name="registro" class="btn btn-danger btn-xs">
@@ -116,10 +116,7 @@
 			       		   <a href="index.php">Volver</a>
 			      		</button> 
 
-			      	</br>
-
-
-
+			      
 			</article> 
 			
 			<?php include('quienesfooter.php');

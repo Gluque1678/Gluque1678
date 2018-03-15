@@ -100,6 +100,8 @@
 
 		      ?>
 
+		     </br>
+
 		     <div class="input-group"> <span class="input-group-addon">Buscar</span>
 		        <input id="filtrar" type="text" class="form-control" placeholder="Buscador">
 		      </div>
@@ -172,7 +174,7 @@
 		            	<td><a href='administradoractivar_desactivar.proc.php?id=$prod[id_usu]'><i class='fa fa-eye fa-2x fa-pull-left fa-border' title='activar'></i></a>";
 				          }
 
-				  echo "</a><td></tr>";
+				  echo "</a></td></tr>";
 
 		        		}
 
