@@ -53,7 +53,7 @@
 	     			</br></br></br></br>
 
 	     			<!-- Primer boton modal-->
-	     			<a href="#ventana1" class="btn btn-primary btn-lg" data-toggle="modal" style="margin-top: -180px; margin-left: 80px;">Condiciones generales de contratación</a>
+	     			<a href="#ventana1" class="btn btn-primary btn-lg btn-md btn-xs" data-toggle="modal" style="margin-top: -180px; margin-left: 80px;">Condiciones generales de contratación</a>
 					  						
 					<!-- Segundo boton modal-->
 	     			 <a href="#ventana2" class="btn btn-success btn-lg" data-toggle="modal" style="margin-top: -180px; margin-left: 10px;">Envios</a>
@@ -80,7 +80,7 @@
 					
 			     	<!-- Primera ventana modal -->		
 					<!-- Modal -->
-					<div class="modal fade bd-example-modal-lg" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal fade bd-example-modal-lg bd-example-modal-md bd-example-modal-xs" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					  <div class="modal-dialog" role="document">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -431,7 +431,7 @@
 
 					<div class="card-group">
 					  <div class="card">
-					    <img class="card-img-top text-center" src="./img/material/img12.jpg" style="width:300px;height:300px">
+					    <img class="card-img-top text-center" src="./img/material/img15.jpg" style="width:300px;height:300px">
 					    <div class="card-body">
 					      <h5 class="card-title">SAMSUNG TV</h5>
 					      <p class="card-text"></p>
@@ -441,7 +441,7 @@
 					    </div>
 					  </div>
 					  <div class="card">
-					    <img class="card-img-top"src="./img/material/img13.jpg" alt="Card image cap" style="width:300px;height:300px">
+					    <img class="card-img-top"src="./img/material/img16.jpg" alt="Card image cap" style="width:300px;height:300px">
 					    <div class="card-body">
 					      <h5 class="card-title">SAMSUNG TV CURVO</h5>
 					      <p class="card-text"></p>
@@ -451,7 +451,7 @@
 					    </div>
 					  </div>
 					  <div class="card">
-					    <img class="card-img-top" src="./img/material/img14.jpg" alt="Card image cap" style="width:300px;height:300px">
+					    <img class="card-img-top" src="./img/material/img17.jpg" alt="Card image cap" style="width:300px;height:300px">
 					    <div class="card-body">
 					      <h5 class="card-title">SAMSUNG TV</h5>
 					      <p class="card-text"></p>
@@ -470,7 +470,7 @@
 
 					<div class="card-group">
 					  <div class="card">
-					    <img class="card-img-top text-center" src="./img/material/img15.jpg" style="width:300px;height:300px">
+					    <img class="card-img-top text-center" src="./img/material/img12.jpg" style="width:300px;height:300px">
 					    <div class="card-body">
 					      <h5 class="card-title">PC GAMMING MSI</h5>
 					      <p class="card-text"></p>
@@ -480,7 +480,7 @@
 					    </div>
 					  </div>
 					  <div class="card">
-					    <img class="card-img-top"src="./img/material/img16.jpg" alt="Card image cap" style="width:300px;height:300px">
+					    <img class="card-img-top"src="./img/material/img13.jpg" alt="Card image cap" style="width:300px;height:300px">
 					    <div class="card-body">
 					      <h5 class="card-title">GAMER PC </h5>
 					      <p class="card-text"></p>
@@ -490,7 +490,7 @@
 					    </div>
 					  </div>
 					  <div class="card">
-					    <img class="card-img-top" src="./img/material/img17.jpg" alt="Card image cap" style="width:300px;height:300px">
+					    <img class="card-img-top" src="./img/material/img14.jpg" alt="Card image cap" style="width:300px;height:300px">
 					    <div class="card-body">
 					      <h5 class="card-title">SET GAMING</h5>
 					      <p class="card-text"></p>
